@@ -1,0 +1,16 @@
+# Deivid Santos
+
+> Especialista em gestão de dispositivos Apple e Modern Workplace, com mais de sete anos de experiência em ambientes corporativos de grande porte. Foco em segurança, automação e conformidade. Autor de tutoriais em português sobre MDM, Jamf Pro, infraestrutura como código e DEX. Administrador da comunidade Brazil Apple Admins, no Jamf Community.
+
+## Atuação
+
+- Gestão de frotas Apple: Jamf Pro, Jamf School, Microsoft Intune, Mosyle, Hexnode, Apple Configurator, Apple Business Manager e Zero-Touch Deployment.
+- Identidade e segurança: Platform SSO, Okta, Entra ID, CIS Benchmarks, MITRE ATT&CK, resposta a incidentes.
+- Automação: Swift Dialog, Bash, Python, PowerShell, AppleScript, Power Automate e Power Apps.
+- Experiência do colaborador: onboarding automatizado e indicadores de DEX.
+
+## Links
+
+- [Aprenda Modern Workplace](https://learn.deividsantos.com.br/): site de tutoriais em português sobre gestão de dispositivos Apple.
+- [Índice dos tutoriais para LLMs](https://learn.deividsantos.com.br/llms.txt): lista de todas as lições com descrições.
+- [Contato](mailto:dnsto@icloud.com): e-mail para conversas técnicas e projetos.
