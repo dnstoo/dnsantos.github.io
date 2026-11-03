@@ -1,16 +1,32 @@
-# Deivid Santos
+# Deívid Santos
 
-> Especialista em gestão de dispositivos Apple e Modern Workplace, com mais de sete anos de experiência em ambientes corporativos de grande porte. Foco em segurança, automação e conformidade. Autor de tutoriais em português sobre MDM, Jamf Pro, infraestrutura como código e DEX. Administrador da comunidade Brazil Apple Admins, no Jamf Community.
+> Especialista em Gerenciamento Apple e Modern Workplace com mais de 15 anos de trajetória em infraestrutura de TI e mais de 2.500 Macs gerenciados em operações corporativas de grande porte (finanças, bancos, mobilidade e mídia). Administrador do grupo Brazil Apple Admins no Jamf Community e palestrante no Sejunta's Summit 2026.
 
-## Atuação
+## Na prática (Bastidores de operação)
 
-- Gestão de frotas Apple: Jamf Pro, Jamf School, Microsoft Intune, Mosyle, Hexnode, Apple Configurator, Apple Business Manager e Zero-Touch Deployment.
-- Identidade e segurança: Platform SSO, Okta, Entra ID, CIS Benchmarks, MITRE ATT&CK, resposta a incidentes.
-- Automação: Swift Dialog, Bash, Python, PowerShell, AppleScript, Power Automate e Power Apps.
-- Experiência do colaborador: onboarding automatizado e indicadores de DEX.
+- Diagnóstico de rede e substituição de agente de segurança cujo certificado de inspeção SSL interrompia silenciosamente o HTTPS de outros agentes da frota.
+- Migração de MDM (Microsoft Intune para Jamf Pro) de cerca de 2.000 Macs dividida em cinco ondas, com janelas de adiamento para o usuário e acompanhamento em tempo real via Python.
+- Arquitetura de identidade unificada (Apple Business Manager federado com Entra ID via SCIM e Jamf Connect via OIDC), contornando o limite técnico das funções administrativas do ABM que não federam.
+- Desenvolvimento de portal interno unificado (FastAPI e React) integrando Jamf, Intune, ABM, Entra ID e segurança de endpoint com relatórios como código.
+- Adequação de segurança de um BPO: Microsoft 365, Intune e Autopilot, Defender como antivírus e Sentinel como SIEM.
+- Implantação de Jamf em banco digital com Zero Touch Deployment, patches automáticos e hardening, com mais de 400 horas de trabalho manual economizadas.
+
+## Trajetória por setores
+
+- Mídia & Entretenimento em Larga Escala (2025 → hoje): 1.800+ Macs sob gestão.
+- Mobilidade & Logística (2024–2025): ~300 Macs.
+- Setor Financeiro & Bancos Digitais (2019–2024): ~150 a 300 Macs.
+- Suporte, Redes e Infraestrutura (2011–2019): base técnica de redes, servidores e suporte.
+
+## Comunidade, Ensino e Certificações
+
+- Comunidade: Administrador do Brazil Apple Admins (Jamf Community) e palestrante no Sejunta's Summit 2026.
+- Ensino (Em breve): Trilhas de estudo e curso prático de gestão Apple corporativa, MDM, segurança, infraestrutura como código (IaC) e IA aplicada à operação em preparação.
+- Certificações: Jamf Management Engineer, Jamf Management Consultant, Jamf Certified Associate (Jamf Pro e Jamf Protect), Cisco Ethical Hacker, Cisco Introduction to Cybersecurity.
 
 ## Links
 
-- [Aprenda Modern Workplace](https://learn.deividsantos.com.br/): site de tutoriais em português sobre gestão de dispositivos Apple.
-- [Índice dos tutoriais para LLMs](https://learn.deividsantos.com.br/llms.txt): lista de todas as lições com descrições.
-- [Contato](mailto:dnsto@icloud.com): e-mail para conversas técnicas e projetos.
+- [Brazil Apple Admins no Jamf Community](https://community.jamf.com/groups/brazil-apple-admins-215)
+- [LinkedIn](https://www.linkedin.com/in/dnsto)
+- [GitHub](https://github.com/dnstoo)
+- [Contato](mailto:dnsto@icloud.com)
