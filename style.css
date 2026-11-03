@@ -343,6 +343,7 @@ h1 {
 
 .duas {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2.25rem;
 }
 
@@ -718,6 +719,74 @@ footer {
   }
 
   .selos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    max-width: 20rem;
+  }
+
+  /* Trajetória: a tabela vira lista, uma linha por período (sem rolagem lateral). */
+  .registro thead {
+    display: none;
+  }
+
+  .registro caption {
+    display: block;
+  }
+
+  .registro,
+  .registro tbody,
+  .registro tfoot {
+    display: block;
+  }
+
+  .registro tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 1rem;
+    padding-block: 1.25rem;
+    border-bottom: 1px solid var(--linha);
+  }
+
+  .registro th,
+  .registro td {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .registro .data {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .registro tr .num {
+    grid-row: 1;
+    grid-column: 2;
+    text-align: right;
+  }
+
+  .registro tbody th {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+  }
+
+  .registro tfoot tr {
+    border-bottom: 0;
+    align-items: center;
+  }
+
+  .registro tfoot td:empty {
+    display: none;
+  }
+
+  .registro tfoot th {
+    grid-row: 1;
+    grid-column: 1;
+    text-align: left;
+    padding: 0;
+    font-size: 1.05rem;
+  }
+
+  .registro tfoot .num {
+    font-size: 1.5rem;
   }
 }
