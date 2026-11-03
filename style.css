@@ -709,6 +709,52 @@ footer {
 
 /* Celular */
 @media (max-width: 42rem) {
+  /* Menu numa linha só, com alvos de toque de 44px */
+  .barra ul {
+    gap: 0 1.1rem;
+  }
+
+  .barra li a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-block: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Ações do hero: uma coluna, todas com a mesma largura */
+  .acoes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .botao-travado em {
+    margin-left: auto;
+  }
+
+  .retrato {
+    width: min(100%, 16rem);
+  }
+
+  .retrato figcaption {
+    text-wrap: balance;
+  }
+
+  .relato-meta {
+    font-size: 0.8rem;
+  }
+
+  /* Faixa de contato mais baixa, sem tapar o conteúdo */
+  .faixa-falar {
+    min-height: 2.5rem;
+    padding-block: 0.45rem;
+    font-size: 0.875rem;
+  }
+
+  body {
+    padding-bottom: 2.5rem;
+  }
+
   .ficha {
     grid-template-columns: 1fr;
   }
