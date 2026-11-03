@@ -24,6 +24,7 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f5f3ec" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f1216" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem("tema");if(t==="claro"||t==="escuro")document.documentElement.dataset.tema=t}catch(e){}</script>
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">
 {
@@ -53,13 +54,19 @@
 <header class="abertura" id="topo">
   <div class="wrap">
     <nav class="barra" aria-label="Principal">
-      <a class="marca" href="#topo">Deívid Santos</a>
+      <a class="marca" href="#topo" aria-label="Deívid Santos, início"><img src="/favicon.png" width="40" height="40" alt=""></a>
       <ul>
         <li><a href="#pratica">Na prática</a></li>
         <li><a href="#trajetoria">Trajetória</a></li>
         <li><a href="#comunidade">Comunidade</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
+      <div class="barra-acoes">
+        <button class="tema" type="button" aria-label="Alternar entre tema claro e escuro" aria-pressed="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+        </button>
+        <a class="botao-linkedin" href="https://www.linkedin.com/in/dnsto">LinkedIn</a>
+      </div>
     </nav>
 
     <div class="hero-grade">
@@ -315,6 +322,18 @@
 
 <script>
 // Esconde a barra inferior fixa enquanto os botões do topo ou a seção de contato já estão visíveis.
+(function () {
+  var b = document.querySelector('.tema'), r = document.documentElement;
+  if (!b) return;
+  function atual() { return r.dataset.tema || (matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro'); }
+  b.setAttribute('aria-pressed', atual() === 'escuro');
+  b.addEventListener('click', function () {
+    var t = atual() === 'escuro' ? 'claro' : 'escuro';
+    r.dataset.tema = t;
+    b.setAttribute('aria-pressed', t === 'escuro');
+    try { localStorage.setItem('tema', t); } catch (e) {}
+  });
+})();
 (function () {
   var barra = document.querySelector('.faixa-falar'), alvos = [document.querySelector('.acoes'), document.getElementById('contato')], vis = [false, false];
   if (!barra || !alvos[0] || !alvos[1] || !('IntersectionObserver' in window)) return;

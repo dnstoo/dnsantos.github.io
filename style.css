@@ -38,7 +38,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-tema="claro"]) {
     --papel: #0f1216;
     --papel-forte: #171b22;
     --tinta: #f2f0e8;
@@ -49,6 +49,23 @@
     --sobre-noite: #f2f0e8;
     --sobre-noite-suave: #a7b0bc;
   }
+}
+
+:root[data-tema="escuro"] {
+  color-scheme: dark;
+  --papel: #0f1216;
+  --papel-forte: #171b22;
+  --tinta: #f2f0e8;
+  --tinta-suave: #a7b0bc;
+  --linha: #2a313d;
+  --linha-forte: #f2f0e8;
+  --noite: #161a21;
+  --sobre-noite: #f2f0e8;
+  --sobre-noite-suave: #a7b0bc;
+}
+
+:root[data-tema="claro"] {
+  color-scheme: light;
 }
 
 *, *::before, *::after {
@@ -149,11 +166,56 @@ a {
 }
 
 .marca {
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
   text-decoration: none;
-  padding-block: 0.35rem;
+}
+
+.marca img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.barra-acoes {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tema {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: transparent;
+  color: var(--tinta);
+  border: 2px solid var(--linha);
+  cursor: pointer;
+}
+
+.tema:hover {
+  background: var(--papel-forte);
+}
+
+.botao-linkedin {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: 1rem;
+  background: var(--tinta);
+  color: var(--papel);
+  font-family: var(--fonte-dados);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.botao-linkedin:hover {
+  background: var(--amarelo);
+  color: var(--tinta-sobre-amarelo);
 }
 
 .barra ul {
@@ -732,8 +794,65 @@ footer {
     margin-left: auto;
   }
 
+  /* Marca e ações na primeira linha; links de seção na segunda */
+  .barra ul {
+    order: 3;
+    width: 100%;
+  }
+
+  .barra-acoes {
+    order: 2;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 14vw, 4rem);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+  }
+
+  /* Funko grande no círculo, depois do texto */
   .retrato {
-    width: min(100%, 16rem);
+    position: relative;
+    justify-self: center;
+    width: min(100%, 17rem);
+    text-align: center;
+  }
+
+  .retrato::before,
+  .retrato::after {
+    content: "";
+    position: absolute;
+    width: 0.6rem;
+    border-radius: 1rem;
+  }
+
+  .retrato::before {
+    top: 0.5rem;
+    right: 0.25rem;
+    height: 3rem;
+    background: var(--amarelo);
+    transform: rotate(25deg);
+  }
+
+  .retrato::after {
+    top: 2.2rem;
+    left: 0;
+    height: 2.2rem;
+    background: var(--tinta);
+    transform: rotate(-35deg);
+  }
+
+  .retrato-quadro {
+    aspect-ratio: 1;
+    padding: 1.1rem 1.1rem 0;
+    border: 6px solid var(--amarelo);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .avatar {
+    height: 100%;
+    object-position: bottom;
   }
 
   .retrato figcaption {
