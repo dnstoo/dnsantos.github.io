@@ -520,7 +520,7 @@ h3 {
   margin-top: 0.5rem;
   padding: 1.6rem;
   background: var(--papel-forte);
-  border-left: 5px solid var(--amarelo);
+  border: 1px solid var(--linha);
   max-width: 62ch;
 }
 
@@ -558,21 +558,19 @@ h3 {
   margin-bottom: 1.25rem;
 }
 
-.link-credenciais {
-  display: inline-block;
-  padding-block: 0.45rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-decoration: underline;
-  text-decoration-color: var(--amarelo);
-  text-decoration-thickness: 2px;
-}
-
 .selos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   max-width: 30rem;
+}
+
+/* Os selos do Jamf Management trazem cantos cinza fora da forma arredondada: o recorte esconde. */
+.selos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
 }
 
 /* Fecho / Contato */
