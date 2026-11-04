@@ -21,12 +21,13 @@
 ## Comunidade, Ensino e Certificações
 
 - Comunidade: Administrador do Brazil Apple Admins (Jamf Community) e palestrante no Sejunta's Summit 2026.
-- Ensino (Em breve): Trilhas de estudo e curso prático de gestão Apple corporativa, MDM, segurança, infraestrutura como código (IaC) e IA aplicada à operação em preparação.
+- Blog: posts e a série "MDM como Código" sobre gestão Apple corporativa, MDM, segurança, infraestrutura como código (IaC) e IA aplicada à operação.
 - Certificações: Jamf Management Engineer, Jamf Management Consultant, Jamf Certified Associate (Jamf Pro e Jamf Protect), Cisco Ethical Hacker, Cisco Introduction to Cybersecurity.
 
 ## Links
 
 - [Brazil Apple Admins no Jamf Community](https://community.jamf.com/groups/brazil-apple-admins-215)
+- [Blog](https://learn.deividsantos.com.br)
 - [LinkedIn](https://www.linkedin.com/in/dnsto)
 - [GitHub](https://github.com/dnsto)
 - [Contato](mailto:dnsto@icloud.com)
