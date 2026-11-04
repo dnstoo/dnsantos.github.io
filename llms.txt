@@ -29,5 +29,5 @@
 - [Brazil Apple Admins no Jamf Community](https://community.jamf.com/groups/brazil-apple-admins-215)
 - [Blog](https://blog.deividsantos.com.br)
 - [LinkedIn](https://www.linkedin.com/in/dnsto)
-- [GitHub](https://github.com/dnsto)
+- [GitHub](https://github.com/dnstoo)
 - [Contato](mailto:dnsto@icloud.com)
