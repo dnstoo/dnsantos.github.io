@@ -24,7 +24,7 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f5f3ec" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f1216" media="(prefers-color-scheme: dark)">
-<script>try{var t=localStorage.getItem("tema");if(t==="claro"||t==="escuro")document.documentElement.dataset.tema=t}catch(e){}</script>
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("tema");if(t==="claro"||t==="escuro")document.documentElement.dataset.tema=t}catch(e){}</script>
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">
 {
@@ -55,13 +55,17 @@
   <div class="wrap">
     <nav class="barra" aria-label="Principal">
       <a class="marca" href="#topo" aria-label="Deívid Santos, início"><img src="/favicon.png" width="40" height="40" alt=""></a>
-      <ul>
+      <ul id="menu-principal">
         <li><a href="#pratica">Na prática</a></li>
         <li><a href="#trajetoria">Trajetória</a></li>
         <li><a href="#comunidade">Comunidade</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
       <div class="barra-acoes">
+        <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+          <svg class="i-abrir" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          <svg class="i-fechar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
         <button class="tema" type="button" aria-label="Alternar entre tema claro e escuro" aria-pressed="false">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
         </button>
@@ -322,6 +326,18 @@
 
 <script>
 // Esconde a barra inferior fixa enquanto os botões do topo ou a seção de contato já estão visíveis.
+(function () {
+  var n = document.querySelector('.barra'), b = document.querySelector('.menu');
+  if (!n || !b) return;
+  function abrir(sim) {
+    n.toggleAttribute('data-aberto', sim);
+    b.setAttribute('aria-expanded', sim);
+    b.setAttribute('aria-label', sim ? 'Fechar menu' : 'Abrir menu');
+  }
+  b.addEventListener('click', function () { abrir(!n.hasAttribute('data-aberto')); });
+  n.addEventListener('click', function (e) { if (e.target.closest('ul a')) abrir(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && n.hasAttribute('data-aberto')) { abrir(false); b.focus(); } });
+})();
 (function () {
   var b = document.querySelector('.tema'), r = document.documentElement;
   if (!b) return;

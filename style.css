@@ -183,7 +183,8 @@ a {
   gap: 0.6rem;
 }
 
-.tema {
+.tema,
+.menu {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +196,21 @@ a {
   cursor: pointer;
 }
 
-.tema:hover {
+.menu {
+  display: none;
+}
+
+.menu .i-fechar,
+.menu[aria-expanded="true"] .i-abrir {
+  display: none;
+}
+
+.menu[aria-expanded="true"] .i-fechar {
+  display: block;
+}
+
+.tema:hover,
+.menu:hover {
   background: var(--papel-forte);
 }
 
@@ -794,10 +809,30 @@ footer {
     margin-left: auto;
   }
 
-  /* Marca e ações na primeira linha; links de seção na segunda */
+  /* Menu hambúrguer: marca e ações na primeira linha, links abrem embaixo */
+  .menu {
+    display: inline-flex;
+  }
+
   .barra ul {
     order: 3;
     width: 100%;
+  }
+
+  .js .barra ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .js .barra[data-aberto] ul {
+    display: flex;
+  }
+
+  .js .barra li a {
+    width: 100%;
+    border-top: 1px dotted var(--linha);
+    font-size: 1.05rem;
   }
 
   .barra-acoes {
