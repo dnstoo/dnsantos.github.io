@@ -513,7 +513,8 @@ h1 {
   margin-top: 1.5rem;
   font-size: clamp(2.75rem, 5.6vw, 4.5rem);
   font-weight: 400;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
 .hero-escuro .retrato figcaption {
@@ -1291,5 +1292,23 @@ footer :focus-visible {
 
   .registro tfoot .num {
     font-size: 1.5rem;
+  }
+}
+
+/* Texto corrido sem palavra solta na última linha */
+p {
+  text-wrap: pretty;
+}
+
+/* Celular: cargo em uma linha, dois botões no hero (Blog já está no menu) */
+@media (max-width: 40rem) {
+  .hero-escuro .cargo {
+    gap: 0.6rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-escuro .acoes .botao-secundario:last-child {
+    display: none;
   }
 }
