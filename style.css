@@ -1300,15 +1300,11 @@ p {
   text-wrap: pretty;
 }
 
-/* Celular: cargo em uma linha, dois botões no hero (Blog já está no menu) */
+/* Celular: cargo em uma linha */
 @media (max-width: 40rem) {
   .hero-escuro .cargo {
     gap: 0.6rem;
     font-size: 0.7rem;
     letter-spacing: 0.1em;
-  }
-
-  .hero-escuro .acoes .botao-secundario:last-child {
-    display: none;
   }
 }
