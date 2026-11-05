@@ -329,8 +329,6 @@
   </div>
 </footer>
 
-<a class="faixa-falar" href="#contato">Trocar uma ideia · dnsto@icloud.com</a>
-
 <script>
 // Esconde a barra inferior fixa enquanto os botões do topo ou a seção de contato já estão visíveis.
 (function () {
@@ -355,16 +353,6 @@
     r.dataset.tema = t;
     b.setAttribute('aria-pressed', t === 'escuro');
     try { localStorage.setItem('tema', t); } catch (e) {}
-  });
-})();
-(function () {
-  var barra = document.querySelector('.faixa-falar'), alvos = [document.querySelector('.acoes'), document.getElementById('contato')], vis = [false, false];
-  if (!barra || !alvos[0] || !alvos[1] || !('IntersectionObserver' in window)) return;
-  alvos.forEach(function (el, i) {
-    new IntersectionObserver(function (e) {
-      vis[i] = e[0].isIntersecting;
-      barra.toggleAttribute('hidden', vis[0] || vis[1]);
-    }, { threshold: 0.25 }).observe(el);
   });
 })();
 </script>

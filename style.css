@@ -1054,32 +1054,6 @@ footer :focus-visible {
   font-size: 0.85rem;
 }
 
-/* Faixa inferior de contato */
-.faixa-falar {
-  position: fixed;
-  inset: auto 0 0 0;
-  z-index: 20;
-  min-height: 2.75rem;
-  padding: 0.65rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--amarelo);
-  color: var(--tinta-sobre-amarelo);
-  border-top: 2px solid var(--tinta-sobre-amarelo);
-  font-weight: 800;
-  font-size: 0.95rem;
-  text-decoration: none;
-}
-
-.faixa-falar:hover {
-  background: var(--amarelo-hover);
-}
-
-.faixa-falar[hidden] {
-  display: none;
-}
-
 /* 404 */
 .nao-achada {
   min-height: 100svh;
@@ -1186,17 +1160,6 @@ footer :focus-visible {
 
   .relato-meta {
     font-size: 0.8rem;
-  }
-
-  /* Faixa de contato mais baixa, sem tapar o conteúdo */
-  .faixa-falar {
-    min-height: 2.5rem;
-    padding-block: 0.45rem;
-    font-size: 0.875rem;
-  }
-
-  body {
-    padding-bottom: 2.5rem;
   }
 
   .ficha {
