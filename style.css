@@ -192,6 +192,7 @@ a {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
+  min-width: 2.75rem;
   text-decoration: none;
 }
 
@@ -210,7 +211,7 @@ a {
 .marca-cargo {
   margin-left: 0.85rem;
   font-family: var(--fonte-dados);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--tinta-suave);
@@ -291,8 +292,9 @@ a {
 }
 
 .barra li a {
-  display: inline-block;
-  padding-block: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
   font-family: var(--fonte-dados);
   font-size: 0.78rem;
   letter-spacing: 0.14em;
@@ -469,7 +471,7 @@ h1 {
 .hero-escuro {
   background: var(--noite);
   color: var(--sobre-noite);
-  padding-block: clamp(3rem, 7vw, 5.5rem) 0;
+  padding-block: clamp(2.5rem, 5vw, 4rem) 0;
   border-bottom: 2px solid var(--linha-forte);
 }
 
@@ -510,12 +512,12 @@ h1 {
 .hero-escuro h1 {
   margin-top: 1.5rem;
   font-size: clamp(2.75rem, 5.6vw, 4.5rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.045em;
 }
 
 .hero-escuro .retrato figcaption {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -534,7 +536,7 @@ h1 {
 .ficha {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
   border-top: 1px solid rgb(255 255 255 / 0.25);
 }
 
@@ -553,7 +555,7 @@ h1 {
 
 .ficha dd {
   font-family: var(--fonte-dados);
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.75rem);
   line-height: 1;
   letter-spacing: -0.03em;
 }
@@ -643,6 +645,29 @@ h3 {
 .relato p:not(.relato-meta) {
   margin-top: 0.65rem;
   color: var(--tinta-suave);
+}
+
+.relato-mais summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-top: 0.25rem;
+  font-family: var(--fonte-dados);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--amarelo);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+.relato-mais summary:hover {
+  background: var(--amarelo);
+  color: var(--tinta-sobre-amarelo);
+  text-decoration: none;
 }
 
 .relato h3 a {
@@ -873,10 +898,20 @@ h3 {
   border-bottom: 0;
 }
 
+.contato {
+  margin-top: 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.contato-titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 .canais {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: 2.5rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
   list-style: none;
   border: 1px solid var(--linha);
@@ -1023,7 +1058,7 @@ footer :focus-visible {
   position: fixed;
   inset: auto 0 0 0;
   z-index: 20;
-  min-height: 2.9rem;
+  min-height: 2.75rem;
   padding: 0.65rem 1rem;
   display: flex;
   justify-content: center;
@@ -1186,7 +1221,8 @@ footer :focus-visible {
   }
 
   .selos {
-    gap: 0.4rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
     max-width: none;
   }
 
