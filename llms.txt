@@ -1,6 +1,6 @@
 # Deívid Santos
 
-> Especialista em Gerenciamento Apple e Modern Workplace com mais de 15 anos de trajetória em infraestrutura de TI e mais de 2.500 Macs gerenciados em operações corporativas de grande porte (finanças, bancos, mobilidade e mídia). Administrador do grupo Brazil Apple Admins no Jamf Community e palestrante no Sejunta's Summit 2026.
+> Especialista em Gerenciamento Apple e Modern Workplace com mais de 15 anos de trajetória em infraestrutura de TI e mais de 2.500 Macs gerenciados em operações corporativas de grande porte (finanças, bancos, mobilidade e mídia). Administrador do grupo Brazil Apple Admins no Jamf Community e palestrante no Sejunta's Summit 2026 (1º/09/2026).
 
 ## Na prática (Bastidores de operação)
 
@@ -20,7 +20,7 @@
 
 ## Comunidade, Ensino e Certificações
 
-- Comunidade: Administrador do Brazil Apple Admins (Jamf Community) e palestrante no Sejunta's Summit 2026.
+- Comunidade: Administrador do Brazil Apple Admins (Jamf Community) e palestrante no Sejunta's Summit 2026 (1º/09/2026).
 - Blog: posts e a série "MDM como Código" sobre gestão Apple corporativa, MDM, segurança, infraestrutura como código (IaC) e IA aplicada à operação.
 - Certificações: Jamf Management Engineer, Jamf Management Consultant, Jamf Certified Associate (Jamf Pro e Jamf Protect), Cisco Ethical Hacker, Cisco Introduction to Cybersecurity.
 
